@@ -207,6 +207,35 @@ window.SITE_DATA = {
         
         
         {
+          type: "compare",
+          id: "memory-revisits",
+          eyebrow: { zh: "长期一致性", en: "Long-term consistency" },
+          title: { zh: "回访海边步道", en: "Revisiting the Waterfront" },
+          body: {
+            zh: "观察末段回访：在这个样例中，关闭 memory 后，先前的步道变成了水面；开启 memory 后，步道和沿岸建筑保留了前次生成的布局与外观。拖动滑块比较完整 25 秒视频。",
+            en: "Watch the return visit near the end: in this example, disabling memory turns the earlier promenade into water. With memory enabled, the promenade and waterfront buildings retain their previously generated layout and appearance. Drag the slider to compare the full 25-second videos.",
+          },
+          scenes: [
+            {
+              label: { zh: "威尼斯日落", en: "Venice sunset" },
+              thumb: "assets/images/memory/polyhaven-venice_sunset.jpg",
+              before: {
+                src: "assets/videos/memory/polyhaven-venice_sunset-off.mp4",
+                label: "Memory off",
+              },
+              after: {
+                src: "assets/videos/memory/polyhaven-venice_sunset-on.mp4",
+                label: "Memory on",
+              },
+            },
+          ],
+          caption: {
+            zh: "两侧使用相同权重、输入、相机轨迹和随机种子（42），仅切换历史 memory。全景图来源：<a href='https://polyhaven.com/a/venice_sunset' target='_blank' rel='noopener'>Poly Haven · Venice Sunset</a>（CC0）；深度与法线由图像估计。",
+            en: "Identical checkpoint, inputs, camera path and seed (42); only historical memory is toggled. Source panorama: <a href='https://polyhaven.com/a/venice_sunset' target='_blank' rel='noopener'>Poly Haven · Venice Sunset</a> (CC0). Depth and normals are estimated from images.",
+          },
+        },
+
+        {
           type: "figure",
           id: "method",
           eyebrow: { zh: "方法", en: "How it works" },
